@@ -94,7 +94,7 @@ int main()
 
 	ofstream os("matrix.txt");
 	if (!os) {
-		cerr << "File could not be opened!" << endl;
+		cerr << "File could not be opened!" << endl; 
 		return 1;
 	}
 
