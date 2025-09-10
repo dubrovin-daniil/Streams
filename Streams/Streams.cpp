@@ -54,7 +54,7 @@ public:
 		return os;
 	}
 
-	friend ifstream& operator>>(ifstream& is, Matrix& matrix) {
+	friend ifstream& operator<<(ifstream& is, Matrix& matrix) {
 		cout << "\nMatrix from file:\n " << endl;
 		char* line = new char[1000];
 		is.read(line, 1000);
@@ -64,7 +64,6 @@ public:
 		delete[] line;
 		return is;
 	};
-
 
 	friend istream& operator>>(istream& is, Matrix& matrix) {
 		cout << "Enter sizeX: ";
@@ -107,7 +106,7 @@ int main()
 		return 1;
 	}
 
-	is >> matrix;
+	is << matrix;
 	is.close();
 }
 
